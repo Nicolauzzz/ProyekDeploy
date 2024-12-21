@@ -1,0 +1,322 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+}
+
+.profile-header {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.profile-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.profile-info p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Styling untuk Bagian Tentang Saya */
+.about {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.about p::before {
+    content: "📷 ";
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 10px auto;
+}
+
+
+/* Styling untuk bagian Social Media */
+.social-media {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.social-media h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Styling untuk Bagian Portofolio */
+.portfolio {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Membatasi lebar maksimal agar tidak terlalu lebar */
+    margin: 0 auto; /* Memastikan konten berada di tengah secara horizontal */
+}
+
+/* Judul Portofolio */
+.portfolio h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container untuk Portofolio */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px; /* Membatasi lebar grid */
+    margin: 0 auto; /* Memastikan grid berada di tengah */
+}
+
+/* Item Portofolio */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Efek Hover pada Item */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar dalam Item */
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Judul dalam Item Portofolio */
+.portfolio-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+/* Efek Hover pada Judul */
+.portfolio-item:hover h3 {
+    color: #007BFF;
+}
+
+/* Deskripsi dalam Item Portofolio */
+.portfolio-item p {
+    font-size: 16px;
+    color: #666;
+    padding: 0 15px 20px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Efek Hover pada Deskripsi */
+.portfolio-item:hover p {
+    color: #444;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+/* Modal image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Tombol tutup */
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Caption text */
+#caption {
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
